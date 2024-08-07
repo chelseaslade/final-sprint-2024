@@ -8,7 +8,6 @@ import Home from "./pages/Home.js";
 import Layout from "./pages/Layout.js";
 import Shop from "./pages/Shop.js";
 import Contact from "./pages/Contact.js";
-import Cart from "./pages/Cart.js";
 import Header from "../src/components/Header.jsx";
 import Footer from "../src/components/Footer.jsx";
 import ProductDetails from "./components/ProductDetails.jsx";
