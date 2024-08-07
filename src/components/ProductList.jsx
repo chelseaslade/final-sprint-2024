@@ -1,9 +1,11 @@
 import React from "react";
 import { mockData } from "../mockAPI";
+import "../App.css";
+import { Link } from "react-router-dom";
 
 const ProductList = () => {
   return (
-    <div className="ProductList">
+    <div className="Products">
       <h1>Product List</h1>
       <ul>
         {mockData.products.map((product) => (
@@ -17,7 +19,9 @@ const ProductList = () => {
                 e.target.src = "https://via.placeholder.com/100x150"; // Placeholder image
               }}
             />
-            <h2>{product.name}</h2>
+            <h2>
+              <Link to={`/product/${product.id}`}>{product.name}</Link>
+            </h2>
             <p>{product.author}</p>
             <p>{product.description}</p>
             <p>Price: ${product.price}</p>

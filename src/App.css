@@ -59,3 +59,21 @@
   height: 58px;
   background-color: #405d72;
 }
+
+.Products {
+  padding: 20px;
+}
+
+.Products a {
+  color: #405d72;
+  text-decoration: underline;
+}
+
+.ProductDetails {
+  padding: 20px;
+}
+
+.Cart {
+  margin: 20px;
+  padding: 40px;
+}

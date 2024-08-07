@@ -2,7 +2,7 @@
 //Final Sprint August 2024
 
 import "./App.css";
-import React from "react";
+import React, { useState } from "react";
 import { Routes, Route } from "react-router-dom";
 import Home from "./pages/Home.js";
 import Layout from "./pages/Layout.js";
@@ -11,8 +11,16 @@ import Contact from "./pages/Contact.js";
 import Cart from "./pages/Cart.js";
 import Header from "../src/components/Header.jsx";
 import Footer from "../src/components/Footer.jsx";
+import ProductDetails from "./components/ProductDetails.jsx";
+import ShoppingCart from "./components/ShoppingCart.jsx";
 
 const App = () => {
+  const [cartBooks, setCartBooks] = useState([]);
+
+  const addToCart = (product) => {
+    setCartBooks((prevItems) => [...prevItems, product]);
+  };
+
   return (
     <>
       <div class="Main">
@@ -26,8 +34,15 @@ const App = () => {
           <Route path="/" element={<Home />} />
           <Route path="/Home" element={<Home />} />
           <Route path="/Shop" element={<Shop />} />
+          <Route
+            path="/product/:id"
+            element={<ProductDetails addToCart={addToCart} />}
+          />
+          <Route
+            path="/Cart"
+            element={<ShoppingCart cartBooks={cartBooks} />}
+          />
           <Route path="/Contact" element={<Contact />} />
-          <Route path="/Cart" element={<Cart />} />
         </Routes>
         <Footer />
       </div>
