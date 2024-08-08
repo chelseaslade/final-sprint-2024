@@ -20,6 +20,12 @@ const App = () => {
     setCartBooks((prevItems) => [...prevItems, product]);
   };
 
+  const removeFromCart = (productId) => {
+    setCartBooks((prevItems) =>
+      prevItems.filter((item) => item.id !== productId)
+    );
+  };
+
   return (
     <>
       <div class="Main">
@@ -39,7 +45,12 @@ const App = () => {
           />
           <Route
             path="/Cart"
-            element={<ShoppingCart cartBooks={cartBooks} />}
+            element={
+              <ShoppingCart
+                cartBooks={cartBooks}
+                removeFromCart={removeFromCart}
+              />
+            }
           />
           <Route path="/Contact" element={<Contact />} />
         </Routes>
