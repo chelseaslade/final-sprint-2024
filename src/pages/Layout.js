@@ -1,6 +1,7 @@
 import { Outlet, Link } from "react-router-dom";
 import React from "react";
 import "../App.css";
+import cartIcon from "../pics/cartIcon.png";
 
 const Layout = () => {
   return (
@@ -17,8 +18,12 @@ const Layout = () => {
             <li>
               <Link to="/Contact">Contact</Link>
             </li>
-            <li>
-              <Link to="/Cart">Cart</Link>
+
+            <li id="cartNav">
+              <Link to="/Cart">
+                Cart
+                <img src={cartIcon} alt="cart icon" id="cartIcon"></img>
+              </Link>
             </li>
           </ul>
         </nav>
