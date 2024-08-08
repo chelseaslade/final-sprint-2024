@@ -32,7 +32,7 @@ const ShoppingCart = ({ cartBooks, removeFromCart }) => {
             </div>
           ))}
           <Link to={"/Checkout"}>
-            <button id="checkOut">Proceed to Check Out</button>
+            <button id="proceedButton">Proceed to Check Out</button>
           </Link>
         </>
       ) : (

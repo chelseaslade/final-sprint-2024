@@ -19,6 +19,7 @@ const App = () => {
 
   const addToCart = (product) => {
     setCartBooks((prevItems) => [...prevItems, product]);
+    alert(`${product.name} has been added to your cart`);
   };
 
   const removeFromCart = (productId) => {

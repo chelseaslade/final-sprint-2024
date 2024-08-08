@@ -4,6 +4,7 @@ const Checkout = ({ cartItems }) => {
   return (
     <>
       <div className="Checkout">
+        <h2>Cart Summary</h2>
         {cartItems.map((item) => (
           <div key={item.id} className="checkout-item">
             <img
@@ -20,7 +21,7 @@ const Checkout = ({ cartItems }) => {
           </div>
         ))}
       </div>
-      <form id="form1">
+      <form id="Form1">
         <label>Contact Information:</label>
         <br />
         <input

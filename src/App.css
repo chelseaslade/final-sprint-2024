@@ -78,6 +78,18 @@
   padding: 40px;
 }
 
-#checkOut {
+#proceedButton {
   margin-top: 20px;
+}
+
+#Form1 {
+  text-align: center;
+}
+
+#Form1 input {
+  width: 300px;
+}
+
+.Checkout {
+  text-align: center;
 }
