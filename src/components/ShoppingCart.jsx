@@ -10,6 +10,19 @@ const ShoppingCart = ({ cartBooks, removeFromCart }) => {
         <>
           {cartBooks.map((product) => (
             <div key={product.id} className="cartBook">
+              <img
+                src={product.image}
+                alt="Book cover"
+                style={{
+                  width: "100px",
+                  height: "200px",
+                  objectFit: "contain",
+                }}
+                onError={(e) => {
+                  e.target.onerror = null; // Prevents infinite loop if image fails
+                  e.target.src = "https://via.placeholder.com/200x300"; // Placeholder image
+                }}
+              />
               <h3>{product.name}</h3>
               <p>${product.price}</p>
               <button onClick={() => removeFromCart(product.id)}>
