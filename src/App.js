@@ -13,6 +13,7 @@ import Footer from "../src/components/Footer.jsx";
 import ProductDetails from "./components/ProductDetails.jsx";
 import ShoppingCart from "./components/ShoppingCart.jsx";
 import Checkout from "./components/Checkout.jsx";
+import Confirmation from "./components/Confirmation.jsx";
 
 const App = () => {
   const [cartBooks, setCartBooks] = useState([]);
@@ -59,6 +60,7 @@ const App = () => {
             element={<Checkout cartItems={cartBooks} />}
           />
           <Route path="/Contact" element={<Contact />} />
+          <Route path="/Confirmation" element={<Confirmation />} />
         </Routes>
         <Footer />
       </div>

@@ -1,4 +1,6 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import "../App.css";
 
 const Checkout = ({ cartItems }) => {
   return (
@@ -81,12 +83,13 @@ const Checkout = ({ cartItems }) => {
         ></input>
         <br />
         <br />
-
-        <input
-          type="submit"
-          value="Get Confirmation"
-          class="u-full-width"
-        ></input>
+        <Link to={"/Confirmation"}>
+          <input
+            type="submit"
+            value="Get Confirmation"
+            class="u-full-width"
+          ></input>
+        </Link>
         <br />
       </form>
       <br />
