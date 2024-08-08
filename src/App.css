@@ -119,9 +119,12 @@ nav {
 }
 
 .ContactPage {
-  height: 700px;
+  height: 900px;
   width: 100%;
   margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .ContactDetails {
@@ -130,6 +133,11 @@ nav {
   background-color: #fff8f3;
   padding: 50px;
   font-size: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  flex-direction: row;
 }
 
 .ContactDetails h2,
@@ -139,4 +147,26 @@ h4 {
 
 #Address {
   font-size: 20px;
+}
+
+#StorePicture {
+  height: 400px;
+  width: auto;
+}
+
+.PicContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  margin: auto;
+}
+
+.ContactText {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 60%;
+  margin-left: 40px;
+  margin-right: 40px;
 }
