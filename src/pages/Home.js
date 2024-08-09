@@ -24,8 +24,8 @@ const Home = () => {
                   src={book.image}
                   alt={book.name}
                   style={{
-                    width: "100px",
-                    height: "150px",
+                    width: "auto",
+                    height: "300px",
                     objectFit: "cover",
                   }}
                 />
