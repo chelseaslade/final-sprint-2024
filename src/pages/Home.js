@@ -1,6 +1,7 @@
 import React from "react";
 import "../App.css";
 import { mockData } from "../mockAPI";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   const getRandomBooks = () => {
@@ -20,15 +21,17 @@ const Home = () => {
           <div className="BookBoxContainer">
             {randomBooks.map((book) => (
               <div key={book.id} className="BookBox">
-                <img
-                  src={book.image}
-                  alt={book.name}
-                  style={{
-                    width: "auto",
-                    height: "300px",
-                    objectFit: "cover",
-                  }}
-                />
+                <Link to={`/product/${book.id}`}>
+                  <img
+                    src={book.image}
+                    alt={book.name}
+                    style={{
+                      width: "auto",
+                      height: "300px",
+                      objectFit: "cover",
+                    }}
+                  />
+                </Link>
                 <h3>{book.name}</h3>
                 <p>by {book.author}</p>
               </div>
