@@ -5,7 +5,7 @@ import ProductDetails from "../components/ProductDetails";
 const ProductPage = () => {
   return (
     <>
-      <div>
+      <div className-="ProductDetails">
         <h2>Product Details</h2>
         <ProductDetails />
       </div>

@@ -14,26 +14,40 @@ const ProductDetails = ({ addToCart }) => {
   }
 
   return (
-    <>
-      <div className="ProductDetails">
-        <h1>{product.name}</h1>
+    <div className="ProductDetails">
+      <h2>Your selection:</h2>
+      <div className="product-container">
         <img
           src={product.image}
           alt={product.name}
-          style={{ width: "200px", height: "300px", objectFit: "cover" }}
           onError={(e) => {
-            e.target.onerror = null; // Prevents infinite loop if image fails
-            e.target.src = "https://via.placeholder.com/200x300"; // Placeholder image
+            e.target.onerror = null;
+            e.target.src = "https://via.placeholder.com/200x300";
           }}
         />
-        <p>Author: {product.author}</p>
-        <p>Description: {product.description}</p>
-        <p>Price: ${product.price}</p>
-        <p>Stock: {product.stock}</p>
-        <p>Category: {product.category}</p>
-        <button onClick={() => addToCart(product)}>Add to Cart</button>
+        <div className="ProductBox">
+          <p>
+            <strong>Title:</strong> {product.name}
+          </p>
+          <p>
+            <strong>Author:</strong> {product.author}
+          </p>
+          <p>
+            <strong>Description:</strong> {product.description}
+          </p>
+          <p>
+            <strong>Price:</strong> ${product.price}
+          </p>
+          <p>
+            <strong>Stock:</strong> {product.stock}
+          </p>
+          <p>
+            <strong>Category:</strong> {product.category}
+          </p>
+          <button onClick={() => addToCart(product)}>Add to Cart</button>
+        </div>
       </div>
-    </>
+    </div>
   );
 };
 
