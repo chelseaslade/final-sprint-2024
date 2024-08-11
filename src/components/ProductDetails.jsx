@@ -3,8 +3,6 @@ import "../App.css";
 import mockData from "../mockAPI";
 import { useParams } from "react-router-dom";
 
-//This is the const that will fetch details from the API and display as product details. Display on ProductDet.js.
-
 const ProductDetails = ({ addToCart }) => {
   const { id } = useParams();
   const product = mockData.products.find(
